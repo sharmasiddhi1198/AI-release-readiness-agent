@@ -45,7 +45,14 @@ if st.button("▶ Run Readiness Check", type="primary"):
     with st.spinner("Running agents..."):
         st.session_state["report"] = orchestrator.run()
 
-report = st.session_state.get("report")
+raw_report = st.session_state.get("report")
+
+if isinstance(raw_report, list):
+    report = raw_report
+elif isinstance(raw_report, dict):
+    report = raw_report.get("report") or raw_report.get("results") or []
+else:
+    report = []
 
 if report:
     go_count = sum(1 for r in report if r["overall_status"] == "GO")
