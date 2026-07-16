@@ -1,0 +1,35 @@
+{
+  "region_requirements": {
+    "US": {
+      "required_subtitles": ["en"],
+      "required_dub": ["en"]
+    },
+    "JP": {
+      "required_subtitles": ["ja", "en"],
+      "required_dub": ["ja"]
+    },
+    "BR": {
+      "required_subtitles": ["pt"],
+      "required_dub": ["pt"]
+    },
+    "DE": {
+      "required_subtitles": ["de"],
+      "required_dub": ["de"]
+    }
+  },
+  "required_metadata_fields": [
+    "title",
+    "genre",
+    "content_rating",
+    "runtime_minutes",
+    "release_region",
+    "release_date",
+    "artwork_status"
+  ],
+  "severity_routing": {
+    "critical": "Content Engineering On-Call",
+    "high": "Localization QA Lead",
+    "medium": "Regional Content Ops",
+    "low": "Metadata Team (non-blocking)"
+  }
+}

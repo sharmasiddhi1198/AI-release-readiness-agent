@@ -1,0 +1,11 @@
+content_id,title,genre,content_rating,runtime_minutes,release_region,release_date,subtitle_languages,dub_languages,artwork_status
+C001,Shadow Ember,Drama,TV-MA,52,US,2026-08-01,"en,es,fr",en,approved
+C002,Neon Requiem,Sci-Fi,TV-14,,JP,2026-08-01,"en,ja",en,approved
+C003,The Quiet Coast,Documentary,TV-PG,88,US,2026-08-03,en,en,pending
+C004,Paper Lanterns,Drama,,95,JP,2026-08-01,"en,ja,ko",,approved
+C005,Iron Bloom,Action,TV-MA,110,BR,2026-08-05,"en,pt",en,approved
+C006,Glass Horizon,Comedy,TV-14,44,US,2026-08-02,"en,es",en,missing
+C007,Wolf & Ember,Fantasy,TV-MA,60,DE,2026-08-04,"en,de",,approved
+C008,Static Bloom,Thriller,TV-MA,97,US,2026-08-01,"en,fr,de,es",en,approved
+C009,Last Light Station,Sci-Fi,TV-14,101,JP,,en,en,approved
+C010,Marigold Season,Drama,TV-PG,,US,2026-08-06,"en,es",en,approved

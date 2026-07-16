@@ -1,0 +1,11 @@
+ticket_id,content_id,reported_by,description,detected_stage
+D101,C001,QA-Auto,Audio drifts out of sync with video after the 22 minute mark in the US English track,pre-launch-regression
+D102,C002,QA-Manual,Japanese subtitle timing is offset by roughly 1.5 seconds throughout episode 3,localization-review
+D103,C003,QA-Manual,Thumbnail artwork shows placeholder gray box instead of final key art,artwork-review
+D104,C005,QA-Auto,Portuguese dub track cuts out completely between minutes 40 and 45,pre-launch-regression
+D105,C006,QA-Manual,Closed captions missing entirely for the Spanish subtitle track,localization-review
+D106,C008,QA-Auto,Minor color banding visible in dark scenes on 4K playback,pre-launch-regression
+D107,C001,QA-Manual,Episode title card typo: "Shaddow Ember" instead of "Shadow Ember",metadata-review
+D108,C009,QA-Auto,Content fails to load on release region JP due to missing region entitlement flag,pre-launch-regression
+D109,C004,QA-Manual,Korean subtitles reference a character name that was changed in final dub script,localization-review
+D110,C007,QA-Auto,German dub audio levels are noticeably lower than the English track,pre-launch-regression
