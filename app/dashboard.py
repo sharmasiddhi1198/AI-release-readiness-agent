@@ -52,21 +52,30 @@ if report:
     conditional_count = sum(1 for r in report if r["overall_status"] == "GO WITH CONDITIONS")
     nogo_count = sum(1 for r in report if r["overall_status"] == "NO-GO")
 
-    total_titles =  len(report)
-    col1, col2, col3, col4 = st.columns(4)
+total_titles = len(report)
 
-col1.metric("🎬 Titles",
-    total_titles,
-    help="Total titles evaluated")
+titles_column, go_column, conditional_column, nogo_column = st.columns(4)
 
-col2.metric("🟢 GO",
-    go_count)
+titles_column.metric(
+        "🎬 Titles",
+        total_titles,
+        help="Total titles evaluated"
+    )
 
-col3.metric("🟡 Conditional",
-    conditional_count)
+go_column.metric(
+        "🟢 GO",
+        go_count
+    )
 
-col4.metric("🔴 NO-GO",
-    nogo_count)
+conditional_column.metric(
+        "🟡 Conditional",
+        conditional_count
+    )
+
+nogo_column.metric(
+        "🔴 NO-GO",
+        nogo_count
+    )
 
 st.divider()
 st.subheader("Executive Release Dashboard")
