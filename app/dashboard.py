@@ -52,14 +52,29 @@ if report:
     conditional_count = sum(1 for r in report if r["overall_status"] == "GO WITH CONDITIONS")
     nogo_count = sum(1 for r in report if r["overall_status"] == "NO-GO")
 
-    col1, col2, col3 = st.columns(3)
-    col1.metric("🟢 Go", go_count)
-    col2.metric("🟡 Go with Conditions", conditional_count)
-    col3.metric("🔴 No-Go", nogo_count)
+    total_titles =  len(report)
+    col1, col2, col3, col4 = st.columns(4)
 
-    st.divider()
+col1.metric("🎬 Titles",
+    total_titles,
+    help="Total titles evaluated")
 
-    for r in report:
+col2.metric("🟢 GO",
+    go_count)
+
+col3.metric("🟡 Conditional",
+    conditional_count)
+
+col4.metric("🔴 NO-GO",
+    nogo_count)
+
+st.divider()
+st.subheader("Executive Release Dashboard")
+st.caption(
+    "Aggregated recommendations produced by metadata validation, localization analysis, and AI-assisted defect triage."
+)
+
+for r in report:
         icon = STATUS_COLORS.get(r["overall_status"], "")
         with st.expander(f"{icon} {r['title']} ({r['content_id']}) — {r['overall_status']}"):
             c1, c2, c3 = st.columns(3)
