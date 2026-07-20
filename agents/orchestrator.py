@@ -64,8 +64,11 @@ def _llm_summary(content_id, title, status, all_issues):
         return _offline_summary(content_id, title, status, all_issues) + f" (API call failed: {e})"
 
 
-def run():
-    metadata_results = {r["content_id"]: r for r in metadata_validator.run()}
+def run(input_data=None):
+    metadata_results = {
+    r["content_id"]: r
+    for r in metadata_validator.run(input_data)
+}
     localization_results = {r["content_id"]: r for r in localization_checker.run()}
     triage_results = defect_triage.run()
 

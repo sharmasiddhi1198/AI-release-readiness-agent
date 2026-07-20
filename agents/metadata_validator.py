@@ -20,7 +20,10 @@ def load_requirements():
         return json.load(f)
 
 
-def load_metadata():
+def load_metadata(input_data=None):
+    if input_data:
+        return pd.DataFrame([input_data])
+
     return pd.read_csv(DATA_DIR / "content_metadata.csv")
 
 
@@ -65,10 +68,10 @@ def validate_row(row, required_fields):
     return issues
 
 
-def run():
+def run(input_data=None):
     """Run metadata validation across all content and return structured results."""
     requirements = load_requirements()
-    df = load_metadata()
+    df = load_metadata(input_data)
     required_fields = requirements["required_metadata_fields"]
 
     results = []
